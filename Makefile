@@ -25,7 +25,7 @@ all:         ${PROG}
 
 ${PROG}:    ${OBJS}
 						@echo "\033[33m----Compiling lib----"
-						@$(CC) ${OBJS} -lmlx -lXext -lX11 -L mlx -o ${PROG} ft_printf/libftprintf.a
+						@$(CC) ${OBJS} -lmlx -lXext -lX11 -L mlx -o${PROG} ft_printf/libftprintf.a
 						@echo "\033[32mSo Long Compiled!\n"
 
 clean:

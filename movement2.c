@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:42:15 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/12 18:52:26 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 18:41:32 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int	check_path(t_game *g, int y, int x)
 		if (g->flag.c == 0)
 			ft_quit(g);
 		else
-			return(0);
+			return (0);
 	}
 	return (1);
 }

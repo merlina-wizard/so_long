@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 18:06:06 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/12 11:48:04 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:52:40 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	*get_tile(t_game game, char c)
 	if (c == 'C')
 		return (game.map.coin.img);
 	if (c == 'N')
-		return (game.map.enemy[0].img);
+		return (game.map.enemy[game.map.enemy_to_print].img);
 	else
 		return (NULL);
 }

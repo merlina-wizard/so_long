@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:57:00 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/14 11:53:05 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 18:51:19 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	dim_matrix(t_map *map)
 		{
 			map->h++;
 			line = get_next_line(fd);
+			printf("Mannaggina %s\n", line);
 			free(to_free);
 		}
 		else
@@ -48,7 +49,7 @@ char	**matrice(t_map *map)
 
 	i = -1;
 	fd = open(map->path, O_RDONLY);
-	matrix = (char **)malloc(sizeof(char *) * (map->h) + 1);
+	matrix = (char **)malloc(sizeof(char *) * (map->h + 1));
 	if (!matrix)
 		return (NULL);
 	matrix[(map->h)] = NULL;
@@ -110,6 +111,9 @@ int	ft_argcheck(t_game *g)
 	if (g->map.path[i - 1] != 'r'
 		|| g->map.path[i - 2] != 'e' || g->map.path[i - 3] != 'b'
 		|| g->map.path[i - 4] != '.')
-		return (1);
+		{
+			ft_printf("inserisci un *.ber");
+			return (1);
+		}
 	return (0);
 }

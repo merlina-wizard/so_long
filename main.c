@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 13:02:11 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/14 11:54:30 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 18:40:52 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int	main(int argc, char **argv)
 	{
 		if (validate(&game, argv) != 1)
 		{
-			ft_close_matrix(game.map.mat);
-			return(-1);
+			if (game.map.mat)
+				ft_close_matrix(game.map.mat);
+			return (-1);
 		}
 		game.mlx = mlx_init();
 		game.win
@@ -29,10 +30,13 @@ int	main(int argc, char **argv)
 				game.map.len * RES, game.map.h * RES, "So_Long");
 		init_image(&game);
 		print_map(game);
-		mlx_key_hook(game.win, key_hook, &game);
+		mlx_loop_hook(game.mlx, loop, &game);
+		mlx_hook(game.win, 2, 1L << 0, key_hook, &game);
 		mlx_hook(game.win, 17, 1L << 0, ft_quit, &game);
 		mlx_loop(game.mlx);
 	}
+	else
+		ft_printf("inserisci 2 argomenti");
 	return (1);
 }
 

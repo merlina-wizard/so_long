@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:40:33 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/14 11:48:07 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 18:13:47 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	**copy_mat(t_game g)
 	int		y;
 
 	y = 0;
-	copy = (char **)malloc(sizeof(char *) * g.map.h + 1);
+	copy = (char **)malloc(sizeof(char *) * (g.map.h + 1));
 	if (!copy)
 		return (NULL);
 	copy[g.map.h] = NULL;

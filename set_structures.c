@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 20:46:30 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/14 11:53:54 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:36:43 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	set_game(t_game *game, char *path)
 	game->nmoves = 0;
 	game->loop = 0;
 	game->aux_rand = 0;
+	game->map.enemy_to_print = 0;
 	return (1);
 }
 

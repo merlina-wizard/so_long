@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 20:57:36 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/12 14:44:20 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 18:42:54 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 #include "so_long.h"
 
-int	ft_quit(t_game *game)
+int	ft_quit(t_game *g)
 {
-	mlx_destroy_window(game->mlx, game->win);
+	mlx_destroy_window(g->mlx, g->win);
 	exit(0);
 	return (0);
 }
@@ -35,4 +35,27 @@ int	key_hook(int key, t_game *game)
 		game->nmoves += move_d(game);
 	print_map(*game);
 	return (0);
+}
+
+int	loop(t_game *g)
+{
+	static int	culo = 0;
+
+	if (culo == 40000)
+	{
+		enemy_loop(g);
+		culo = 0;
+		print_map(*g);
+	}
+	else
+		culo++;
+	return (1);
+}
+
+void	enemy_loop(t_game *g)
+{
+	if (g->map.enemy_to_print == 0)
+		g->map.enemy_to_print = 1;
+	else
+		g->map.enemy_to_print = 0;
 }

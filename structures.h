@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 20:52:24 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/14 11:53:27 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:27:22 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct s_map
 	t_tile	exit;
 	t_tile	coin;
 	t_tile	enemy[2];
-	t_tile	enemy_to_print;
+	int		enemy_to_print;
 	t_tile	wall;
 	t_tile	bg;
 }				t_map;

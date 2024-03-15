@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 13:02:23 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/14 11:47:30 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:30:57 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ int			ft_numlen(long int i);
 char		*ft_itoa(int n);
 int			validate(t_game *g, char **argv);
 int			ft_close_matrix(char **matrix);
+int			loop(t_game *g);
+void		enemy_loop(t_game *g);
 
 #endif
