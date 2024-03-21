@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 13:02:23 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/15 17:30:57 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/21 14:57:13 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include "structures.h"
 # include "mlx/mlx.h"
 
+int			check_square(t_game g);
 int			check_p_letter(t_map *map, t_flag *flag);
 char		**matrice(t_map *map);
 int			dim_matrix(t_map *map);

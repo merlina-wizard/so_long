@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:57:00 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/15 18:51:19 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/21 15:39:40 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,9 @@ int	dim_matrix(t_map *map)
 	while (line)
 	{
 		to_free = line;
-		if (ft_strlen(line) - 1 == (size_t)map->len)
-		{
-			map->h++;
-			line = get_next_line(fd);
-			printf("Mannaggina %s\n", line);
-			free(to_free);
-		}
-		else
-			return (-2);
+		map->h++;
+		line = get_next_line(fd);
+		free(to_free);
 	}
 	free(line);
 	close(fd);
