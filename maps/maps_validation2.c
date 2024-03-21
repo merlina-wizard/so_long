@@ -6,7 +6,7 @@
 /*   By: mamerlin <mamerlin@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:40:33 by mamerlin          #+#    #+#             */
-/*   Updated: 2024/03/21 15:18:31 by mamerlin         ###   ########.fr       */
+/*   Updated: 2024/03/21 16:12:40 by mamerlin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,8 @@ int	check_square(t_game g)
 
 	y = 0;
 	len = ft_strlen(g.map.mat[y]);
-	ft_printf("%i\n", ft_strlen(g.map.mat[y]));
 	while ((int)ft_strlen(g.map.mat[y]) == len && y < (g.map.h - 1))
-		{
 			y++;
-			ft_printf("%i\n", ft_strlen(g.map.mat[y]));
-		}
 	if ((int)ft_strlen(g.map.mat[y]) != len)
 		return (-1);
 	return (1);
